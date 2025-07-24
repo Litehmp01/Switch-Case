@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="d-flex justify-content-center align-items-center flex-column mb-3">
+        <label for="">Coloque um numero de 1 a 12:</label> <br>
+        <input id="valor" type="number">
+        <button id="btn">Clique</button>
+        <p id="resultado">Resultado:</p>
+    </div>
+    <script>
+        let botao = document.getElementById("btn");
+        let resultado = document.getElementById("resultado");
+
+        botao.addEventListener("click", function mes() {
+            let numero = parseInt(document.getElementById("valor").value);
+            let nomeMes;
+
+            switch (numero) {
+                case 1:
+                    nomeMes = "Janeiro";
+                    break;
+                case 2:
+                    nomeMes = "Fevereiro";
+                    break;
+                case 3:
+                    nomeMes = "Março";
+                    break;
+                case 4:
+                    nomeMes = "Abril";
+                    break;
+                case 5:
+                    nomeMes = "Maio";
+                    break;
+                case 6:
+                    nomeMes = "Junho";
+                    break;
+                case 7:
+                    nomeMes = "Julho";
+                    break;
+                case 8:
+                    nomeMes = "Agosto";
+                    break;
+                case 9:
+                    nomeMes = "Setembro";
+                    break;
+                case 10:
+                    nomeMes = "Outubro";
+                    break;
+                case 11:
+                    nomeMes = "Novembro";
+                    break;
+                case 12:
+                    nomeMes = "Dezembro";
+                    break;
+                default:
+                    nomeMes = "( Número inválido! )";
+                    break;
+            }
+
+            resultado.textContent = `Estamos em ${nomeMes}`;
+        });
+    </script>
+
+</body>
+
+</html>
